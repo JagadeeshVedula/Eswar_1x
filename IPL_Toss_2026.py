@@ -177,6 +177,11 @@ def main():
     else:
         print("\nNo matches found for today in schedule.pdf or error reading file.")
         
+    # Exit automatically if running in GitHub Actions or CI environment
+    if os.environ.get("GITHUB_ACTIONS") == "true" or os.environ.get("CI") == "true":
+        print("\nAutomated run complete. Exiting.")
+        return
+
     while True:
         cont = input("\nDo you want to run a manual toss? (y/n): ")
         if cont.lower() == 'y':
