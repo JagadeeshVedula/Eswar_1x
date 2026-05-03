@@ -2,8 +2,8 @@ name: Daily IPL Toss Prediction
 
 on:
   schedule:
-    # 2:30 PM IST is 9:00 AM UTC
-    - cron: '0 9 * * *'
+    # 2:45 PM IST is 9:15 AM UTC
+    - cron: '15 9 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
